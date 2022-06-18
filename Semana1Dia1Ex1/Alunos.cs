@@ -1,6 +1,7 @@
-﻿namespace Semana1Dia1Ex1
+﻿namespace Semana2Dia1Ex1
 {
-    public class Dia1Ex1
+
+    public class Alunos 
     {
         /*@"
         Escreva uma classe cujos objetos representam alunos matriculados em uma disciplina. 
@@ -11,30 +12,28 @@
 
         //Atributos
         public string Nome = "";
-        public int Matricula = 0;   
-        public int Nota1 = 0;
-        public int Nota2 = 0;
-        public int Trabalho = 0;
+        public double Matricula = 0;
+        public double Nota1 = 0;
+        public double Nota2 = 0;
+        public double Trabalho = 0;
 
 
 
         //Metodos
-        public void MediaFinal()
-        {
-            int media;
-            media = (Nota1 + Nota2 + Trabalho) / 3;
-           
+        public double MediaFinal()
+        {            
+            double media = (Nota1 + Nota2 + Trabalho) / 3;
+            return media;
         }
 
-        public void ProvaFinal()
-        {
-            int prova;
-            prova = (Nota1 + Nota2 + Trabalho) - 10;
-
+        public double ProvaFinal()
+        {            
+           double prova = MediaFinal() - 10;
+            
+            if (prova > 0)
+                return prova;
+            else
+                return prova * (-1);
         }
-    }
-    class Alunos : Dia1Ex1
-    {
-
     }
 }
