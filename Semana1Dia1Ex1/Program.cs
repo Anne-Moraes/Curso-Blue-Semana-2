@@ -5,44 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Semana2Dia1Ex1
-{
+{ 
     internal class Program
     {
         static void Main()
         {
-            Alunos aluno = new Alunos();
+            //Como eu faço para o úsuario passar os parametros?
+            Console.WriteLine("Digite o nome, o cargo e o salário do empregado (nessa ordem):");
 
-            Console.WriteLine("Qual o nome do aluno?");
-            string nomeDoAluno = Console.ReadLine();
+            Empregado empregado1 = new Empregado(Console.ReadLine(), Console.ReadLine(), double.Parse(Console.ReadLine()));
 
-            Console.WriteLine("Qual o número da matrícula?");
-            aluno.Matricula = int.Parse(Console.ReadLine());
+            //empregado1.Aumento();
+            //Console.WriteLine(empregado1.Aumento());
 
-            Console.WriteLine("Qual a nota da primeira prova do aluno?");
-            aluno.Nota1 = double.Parse(Console.ReadLine());
+            empregado1.Imprimir();
+        
+            empregado1.SalarioNegativo();
 
-            Console.WriteLine("Qual a nota da segunda prova do aluno?");
-            aluno.Nota2 = double.Parse(Console.ReadLine());
-
-            Console.WriteLine("Qual a nota de trabalho do aluno?");
-            aluno.Trabalho = double.Parse(Console.ReadLine());
-
-            Console.WriteLine($"A matricula do aluno é: {aluno.Matricula} \nA nota da primeira prova do aluno é: {aluno.Nota1.ToString("F2")} \nA nota da segunda prova do aluno é: {aluno.Nota2.ToString("F2")} \nA nota de trabalho do aluno é: {aluno.Trabalho.ToString("F2")}");
-
-            Console.WriteLine($"A Media final do aluno é {aluno.MediaFinal().ToString("F2")}");
-
-            aluno.ProvaFinal();
-
-            if(aluno.ProvaFinal() >= 7)
-            {               
-                Console.WriteLine("O Aluno já está aprovado");
-            }
-            else
-            {
-                double falta = (aluno.MediaFinal() - 7) * -1;
-                Console.WriteLine($"O Aluno precisa tirar {falta.ToString("F2")} para ser aprovado");
-            }
-
+            empregado1.SalarioNegativo();
         }
     }
 }

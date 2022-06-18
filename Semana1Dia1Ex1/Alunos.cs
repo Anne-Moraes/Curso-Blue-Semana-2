@@ -1,37 +1,101 @@
 ﻿namespace Semana2Dia1Ex1
 {
 
-    public class Alunos 
+    public class Empregado 
     {
-        /*@"
-        Escreva uma classe cujos objetos representam alunos matriculados em uma disciplina. 
-        Cada objeto dessa classe deve guardar os seguintes dados do aluno: matrícula, nome, 2 notas de prova e 1 nota de trabalho. 
-        Escreva os seguintes métodos para esta classe:
-            Calcular média: calcula e exibe a média final do aluno com base em suas notas;
-            Calculo nota final: calcula quanto o aluno precisa tirar na prova final para ser aprovado."*/
+
+        /*
+        2. Gerenciando Salários
+        A fim de representar empregados em uma empresa, crie uma classe chamada Empregado que inclui os seguintes atributos; 
+        nome, cargo e salário mensal.
+        Sua classe deve ter um construtor que inicializa os três atributos e também fornecer métodos que executem as seguintes ações:
+        Se o salário mensal não for positivo, configure-o como 0.0.
+        Conceder aumento de salários a seus funcionários de acordo com os dados abaixo: Salário de 0 até 400.00 ganha 15% Salário 
+        de 400.01 até 800.00 ganha 12% Salário de 800.01 até 1200.00 ganha 10% Salário de 1200.01 até 2000.00 ganha 7% 
+        Acima de 2000.00 ganha 4%
+        Imprimir o salário de um funcionário.
+        */
 
         //Atributos
-        public string Nome = "";
-        public int Matricula = 0;
-        public double Nota1 = 0;
-        public double Nota2 = 0;
-        public double Trabalho = 0;
+        public string Nome;
+        public string Cargo;
+        public double SalarioMensal;
+       
 
+        //Construtor
+        public Empregado(string nome, string cargo, double salarioMensal)
+        {
+            Nome = nome;
+            Cargo = cargo;
+            SalarioMensal = salarioMensal;            
+        }
 
 
         //Metodos
-        public double MediaFinal()
-        {            
-            double media = (Nota1 + Nota2 + Trabalho) / 3;
 
-            return media;
-        }
-
-        public double ProvaFinal()
+        public string Imprimir()
         {
-            double prova = (MediaFinal() - 10) * -1;
-
-            return prova;   
+            Console.WriteLine($" Nome = {Nome} \nCargo = {Cargo} \n Salário Mensal = {SalarioMensal}");
+            return Imprimir();
         }
+        public double SalarioNegativo()
+        {
+            if (SalarioMensal < 0)
+            {
+              double zerar =  SalarioMensal * 0;  
+                return zerar;
+            }
+            return SalarioNegativo();
+        }
+
+        public double Aumento()
+        {
+            if (SalarioMensal == 0 || SalarioMensal <= 400.00)
+            {
+                double reajuste, novoSalario;
+                reajuste = 0.15;
+                novoSalario = SalarioMensal * reajuste + SalarioMensal;
+
+                Console.WriteLine($"Seu salário é de: {SalarioMensal} \nSeu novo salario é de: {novoSalario} \nSeu reajuste foi de: 15%");
+
+            }
+            else if (SalarioMensal <= 800.00)
+            {
+                double reajuste, novoSalario;
+                reajuste = 0.12;
+                novoSalario = SalarioMensal * reajuste + SalarioMensal;
+
+                Console.WriteLine($"Seu salário é de: {SalarioMensal} \nSeu novo salario é de: {novoSalario} \nSeu reajuste foi de: 12%");
+            }
+            else if (SalarioMensal <= 1200.00)
+            {
+                double reajuste, novoSalario;
+                reajuste = 0.10;
+                novoSalario = SalarioMensal * reajuste + SalarioMensal;
+
+                Console.WriteLine($"Seu salário é de: {SalarioMensal} \nSeu novo salario é de: {novoSalario} \nSeu reajuste foi de: 10%");
+            }
+            else if (SalarioMensal <= 2000.00)
+            {
+                double reajuste, novoSalario;
+                reajuste = 0.7;
+                novoSalario = SalarioMensal * reajuste + SalarioMensal;
+
+                Console.WriteLine($"Seu salário é de: {SalarioMensal} \nSeu novo salario é de: {novoSalario} \nSeu reajuste foi de: 7%");
+            }
+            else if (SalarioMensal > 2000.01)
+            {
+                double reajuste, novoSalario;
+                reajuste = 0.4;
+                novoSalario = SalarioMensal * reajuste + SalarioMensal;
+
+                Console.WriteLine($"Seu salário é de: {SalarioMensal} \nSeu novo salario é de: {novoSalario} \nSeu reajuste foi de: 4%");
+            }
+            else;
+
+            return Aumento();   
+        }
+
+
     }
 }
