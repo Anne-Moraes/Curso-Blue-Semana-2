@@ -12,7 +12,7 @@
 
         //Atributos
         public string Nome = "";
-        public double Matricula = 0;
+        public int Matricula = 0;
         public double Nota1 = 0;
         public double Nota2 = 0;
         public double Trabalho = 0;
@@ -23,17 +23,15 @@
         public double MediaFinal()
         {            
             double media = (Nota1 + Nota2 + Trabalho) / 3;
+
             return media;
         }
 
         public double ProvaFinal()
-        {            
-           double prova = MediaFinal() - 10;
-            
-            if (prova > 0)
-                return prova;
-            else
-                return prova * (-1);
+        {
+            double prova = (MediaFinal() - 10) * -1;
+
+            return prova;   
         }
     }
 }
