@@ -1,4 +1,4 @@
-﻿namespace Semana2Dia1Ex1
+﻿namespace Semana2Dia1Ex2
 {
 
     public class Empregado 
@@ -33,23 +33,24 @@
 
         //Metodos
 
-        public string Imprimir()
-        {
-            Console.WriteLine($" Nome = {Nome} \nCargo = {Cargo} \n Salário Mensal = {SalarioMensal}");
-            return Imprimir();
+        public void Imprimir()
+        {          
+            Console.WriteLine($"Nome = {Nome} \nCargo = {Cargo} \nSalário Mensal = {SalarioMensal}");            
         }
-        public double SalarioNegativo()
+        public void SalarioNegativo()
         {
             if (SalarioMensal < 0)
             {
-              double zerar =  SalarioMensal * 0;  
-                return zerar;
+              double zerar =  SalarioMensal * -0;
+                Console.WriteLine(zerar);
             }
-            return SalarioNegativo();
+            
         }
 
-        public double Aumento()
+        public void Aumento()
         {
+           
+
             if (SalarioMensal == 0 || SalarioMensal <= 400.00)
             {
                 double reajuste, novoSalario;
@@ -92,10 +93,7 @@
                 Console.WriteLine($"Seu salário é de: {SalarioMensal} \nSeu novo salario é de: {novoSalario} \nSeu reajuste foi de: 4%");
             }
             else;
-
-            return Aumento();   
+            
         }
-
-
     }
 }
