@@ -41,6 +41,7 @@ namespace Semana2Dia1Ex2
         {        
             Console.WriteLine($"Os dados do seu Pet são \nNome: {NomePet} \nEspecie: {Especie} \nRaça: {Raça} \nIdade: {Idade} \nCor: {Cor} \nPorte: {Porte} \nTutor {Tutor} \nObservações: {Observacao}");
         }
+        
     }
     public class Tutor
     {
@@ -60,19 +61,7 @@ namespace Semana2Dia1Ex2
         }
         public void CadastrarTutor()
         {
-            Console.WriteLine("Digite as seguintes informações sobre você:");
-
-            Console.WriteLine("Nome");
-            Nome = Console.ReadLine();
-
-            Console.WriteLine("Especie");
-            Telefone = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Raça");
-            Documento = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Data de nascimento");
-            DataDeNascimento = Console.ReadLine();
+            Console.WriteLine($"Os dados do Tutor são \nNome: {Nome} \nTelefone: {Telefone} \nDocumento: {Documento} \nData de Nascimento: {DataDeNascimento}"); 
         }
     }
 }

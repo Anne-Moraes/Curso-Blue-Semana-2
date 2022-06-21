@@ -1,4 +1,4 @@
-﻿namespace Semana2Dia1Ex2
+﻿ namespace Semana2Dia1Ex2
 {
 
     public class Empregado 

@@ -10,8 +10,6 @@ namespace Semana2Dia1Ex2
     {
         static void Main()
         {
-            //Como eu faço para o úsuario passar os parametros?
-
             Console.WriteLine("Digite o Nome do pet:");
             string nomePet = Console.ReadLine();
 
@@ -38,9 +36,7 @@ namespace Semana2Dia1Ex2
 
             string nomepet = Console.ReadLine();
             Pet pet1 = new Pet(nomePet, especie, raca, idade, cor, porte, tutor, observacao);
-            
-            List<Pet> cadastro = new List<Pet>();
-
+                       
             pet1.Cadastrar();
 
             Console.WriteLine("Digite o Nome do Tutor:");
