@@ -34,7 +34,7 @@ namespace Semana2Dia1Ex2
             Console.WriteLine("Alguma observação?");
             string observacao = Console.ReadLine();
 
-            string nomepet = Console.ReadLine();
+
             Pet pet1 = new Pet(nomePet, especie, raca, idade, cor, porte, tutor, observacao);
                        
             pet1.Cadastrar();
@@ -54,17 +54,6 @@ namespace Semana2Dia1Ex2
             Tutor tutor1 = new Tutor(nomeTutor, telefone, documento, dataNascimento);
 
             tutor1.CadastrarTutor();
-
-
-
-
-
-
-
-
-
-
-
         }
     }
 }
