@@ -1,6 +1,6 @@
 ﻿namespace Semana2Dia3Ex3
 {
-    internal class Program : Animals
+    internal class Program
     {
         static void Main()
         {
@@ -26,7 +26,7 @@
              Console.WriteLine(animals1.GetColor());
              Console.WriteLine(animals1.GetEnvironment());
              Console.WriteLine(animals1.GetNAverageSpeed());*/
-            animal1.GetName();
+           
 
 
         }
