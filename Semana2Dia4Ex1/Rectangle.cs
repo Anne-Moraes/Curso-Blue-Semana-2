@@ -1,6 +1,6 @@
 ﻿namespace Semana2Dia4Ex1
 {
-    abstract class Rectangle
+    public class Rectangle : Triangle
     {
         /*1 - Área das figuras
         Faça um programa que calcule a área de uma figura
@@ -28,6 +28,24 @@
         }
         public static void Run()
         {
+        }
+        public virtual void CalRectangle()
+        {
+            /*Console.WriteLine("Enter the average speed of Fish:");
+            double cAreaT = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the average speed of Fish:");
+            double cBTriangleT = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the average speed of Fish:");
+            double cHeightT = double.Parse(Console.ReadLine());*/
+
+            return((BTriangle * HeightT) / 2);
+
+
+            //var triangleT = new Triangle(AreaT, BTriangleT, HeightT);
+
+            //Console.WriteLine($"\nThe Base of the triangle is {BTriangle} \nThe Height of the Triangle is {HeightT} \nThe area of the triangle is {AreaT}");
         }
 
     }

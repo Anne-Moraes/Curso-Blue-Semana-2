@@ -1,6 +1,6 @@
 ﻿namespace Semana2Dia4Ex1
 {
-    public class Square 
+    public class Square : Triangle
     {
         /*1 - Área das figuras
         Faça um programa que calcule a área de uma figura
