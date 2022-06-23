@@ -1,17 +1,60 @@
 ﻿namespace Semana2Dia3Ex3
 {
-    internal class Fish : Animals
-    {
-        private string Features;
-        public Fish(string name, int nPaws, string color, string environment, int averageSpeed, string features) : base(name, nPaws, color, environment, averageSpeed)
-        {
-            Features = features;
+  public class Fish : Animals 
+  {
+        public string Characteristics;
+        public Fish(string name, int nPaws, string color, string environment, int averageSpeed, string characteristics) : base(name, nPaws, color, environment, averageSpeed)
+        {           
+            Characteristics = characteristics;
         }
-        public void SetFeatures(string features)
+        public Fish()
         {
-            Features = features;
-        }
 
+        }       
+        public static void Run()
+        {
+        }
+        //Get Set
+        public string GetName()
+        {
+            return Name;
+        }
+        public void SetName(string name)
+        {
+            Name = name;
+        }
+        public int GetNPaws()
+        {
+            return NPaws;
+        }
+        public void SetNPawse(int nPaws)
+        {
+            NPaws = nPaws;
+        }
+        public string GetColor()
+        {
+            return Color;
+        }
+        public void SetColor(string color)
+        {
+            Color = color;
+        }
+        public string GetEnvironment()
+        {
+            return Environment;
+        }
+        public void SetEnvironment(string environment)
+        {
+            Environment = environment;
+        }
+        public string GetCharacteristics()
+        {
+            return Characteristics;
+        }
+        public void SetCharacteristics(string characteristics)
+        {
+            Characteristics = characteristics;
+        }
         public static void DiceFish()
         {
             Console.WriteLine("enter the name of Fish:");
@@ -29,9 +72,12 @@
             Console.WriteLine("Enter the average speed of Fish:");
             int averageSpeed = int.Parse(Console.ReadLine());
 
-            var animals1 = new Animals(name, nPaws, color, environment, averageSpeed);
+            Console.WriteLine("Enter the average speed of Fish:");
+            string characteristics = Console.ReadLine();
 
-            Console.WriteLine($"Report:\nAnimal Name:{animals1.GetName} \nNumber of animal's paws: {animals1.GetNPaws} \nthe color of the animal: {animals1.GetColor} \nthe animal's environment{animals1.GetEnvironment} \nthe speed of the animal: {animals1.GetNAverageSpeed}");
+            var fish1 = new Fish(name, nPaws, color, environment, averageSpeed, characteristics);
+
+            Console.WriteLine($"Report:\nFish Name:{fish1.Name} \nNumber of Fish's paws: {fish1.NPaws} \nthe color of the Fish: {fish1.Color} \nthe Fish's environment{fish1.Environment} \nthe speed of the Fish: {fish1.AverageSpeed}, Fish characteristics {fish1.Characteristics}");
         }
     }
 }

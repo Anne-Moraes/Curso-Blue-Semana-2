@@ -4,11 +4,17 @@ namespace Semana2Dia3Ex3
     public class Animals
     {
         //Atributos
-        public string Name { get { return Name; } private set { Name = value; } }
+        /*public string Name { get { return Name; } private set { Name = value; } }
         public int NPaws { get { return NPaws; } private set { NPaws = value; } }
         public string Color { get { return Color; } private set { Color = value; } }
         public string Environment { get { return Environment; } private set { Environment = value; } }
-        public int AverageSpeed { get { return AverageSpeed; } private set { AverageSpeed = value; } }
+        public int AverageSpeed { get { return AverageSpeed; } private set { AverageSpeed = value; } }*/
+
+        public string Name;
+        public int NPaws;
+        public string Color;
+        public string Environment;
+        public int AverageSpeed;
 
         //Construtor
         public Animals(string name, int nPaws, string color, string environment, int averageSpeed)
@@ -23,12 +29,44 @@ namespace Semana2Dia3Ex3
         public Animals()
         {
 
-        }
-        //Get Set
+        }      
         public static void Run()
         {
-        }              
-        public static void Dice() 
+        }
+        //Get Set
+        public string GetName()
+        {
+            return Name;
+        }
+        public void SetName(string name)
+        {
+            Name = name;
+        }
+        public int GetNPaws()
+        {
+            return NPaws;
+        }
+        public void SetNPawse(int nPaws)
+        {
+            NPaws = nPaws;
+        }
+        public string GetColor()
+        {
+            return Color;
+        }
+        public void SetColor(string color)
+        {
+            Color = color;
+        }
+        public string GetEnvironment()
+        {
+            return Environment;
+        }
+        public void SetEnvironment(string environment)
+        {
+            Environment = environment;
+        }
+        public static void Dice()
         {
             Console.WriteLine("enter the name of Animals:");
             string name = Console.ReadLine();
@@ -47,8 +85,28 @@ namespace Semana2Dia3Ex3
 
             var animals1 = new Animals(name, nPaws, color, environment, averageSpeed);
 
-            Console.WriteLine($"Report:\nAnimal Name:{animals1.Name} \nNumber of animal's paws: {animals1.NPaws} \nthe color of the animal: {animals1.Color} \nthe animal's environment{animals1.Environment} \nthe speed of the animal: {animals1.AverageSpeed}");
+           Console.WriteLine($"Report:\nAnimal Name:{animals1.Name} \nNumber of animal's paws: {animals1.NPaws} \nthe color of the animal: {animals1.Color} \nthe animal's environment{animals1.Environment} \nthe speed of the animal: {animals1.AverageSpeed}");
+           
         }
     }
+    public interface IGeneral
+    {
+
+    }   
+    public interface IAnimals : IGeneral
+    {
+    }
+    public interface IMammal: IGeneral
+    {
+
+    }
+    public interface IFish : IGeneral
+    { 
+    }
+    public class General : IGeneral
+    { 
+    }
+
+   
 }
 
