@@ -10,11 +10,11 @@ namespace Semana2Dia3Ex3
         public string Environment { get { return Environment; } private set { Environment = value; } }
         public int AverageSpeed { get { return AverageSpeed; } private set { AverageSpeed = value; } }*/
 
-        public string Name;
-        public int NPaws;
-        public string Color;
-        public string Environment;
-        public int AverageSpeed;
+        public string Name { get; private set; }
+        public int NPaws { get; private set; }
+        public string Color { get; private set; }
+        public string Environment { get; private set; }
+        public int AverageSpeed { get; private set; }
 
         //Construtor
         public Animals(string name, int nPaws, string color, string environment, int averageSpeed)
@@ -33,39 +33,7 @@ namespace Semana2Dia3Ex3
         public static void Run()
         {
         }
-        //Get Set
-        public string GetName()
-        {
-            return Name;
-        }
-        public void SetName(string name)
-        {
-            Name = name;
-        }
-        public int GetNPaws()
-        {
-            return NPaws;
-        }
-        public void SetNPawse(int nPaws)
-        {
-            NPaws = nPaws;
-        }
-        public string GetColor()
-        {
-            return Color;
-        }
-        public void SetColor(string color)
-        {
-            Color = color;
-        }
-        public string GetEnvironment()
-        {
-            return Environment;
-        }
-        public void SetEnvironment(string environment)
-        {
-            Environment = environment;
-        }
+        //Get Set       
         public static void Dice()
         {
             Console.WriteLine("enter the name of Animals:");

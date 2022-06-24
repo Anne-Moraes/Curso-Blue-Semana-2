@@ -2,11 +2,11 @@
 {
   public class Fish : Animals 
   {
-        public string Characteristics;
+        public string Characteristics { get; private set; }
         public Fish(string name, int nPaws, string color, string environment, int averageSpeed, string characteristics) : base(name, nPaws, color, environment, averageSpeed)
-        {           
+        {
             Characteristics = characteristics;
-        }
+}
         public Fish()
         {
 
@@ -15,46 +15,7 @@
         {
         }
         //Get Set
-        public string GetName()
-        {
-            return Name;
-        }
-        public void SetName(string name)
-        {
-            Name = name;
-        }
-        public int GetNPaws()
-        {
-            return NPaws;
-        }
-        public void SetNPawse(int nPaws)
-        {
-            NPaws = nPaws;
-        }
-        public string GetColor()
-        {
-            return Color;
-        }
-        public void SetColor(string color)
-        {
-            Color = color;
-        }
-        public string GetEnvironment()
-        {
-            return Environment;
-        }
-        public void SetEnvironment(string environment)
-        {
-            Environment = environment;
-        }
-        public string GetCharacteristics()
-        {
-            return Characteristics;
-        }
-        public void SetCharacteristics(string characteristics)
-        {
-            Characteristics = characteristics;
-        }
+        
         public static void DiceFish()
         {
             Console.WriteLine("enter the name of Fish:");

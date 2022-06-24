@@ -2,53 +2,12 @@
 {
     public class Mammal : Animals 
     {
-        public string Food;
+        public string Food { get; private set; }
         public Mammal(string name, int nPaws, string color, string environment, int averageSpeed, string food) : base(name, nPaws, color, environment, averageSpeed)
         {
             Food = food;
         }
-        //Get Set
-        public string GetName()
-        {
-            return Name;
-        }
-        public void SetName (string name)
-        {
-            Name = name;
-        }
-        public int GetNPaws()
-        {
-            return NPaws;
-        }       
-        public void SetNPawse(int nPaws)
-        {
-            NPaws = nPaws;
-        }
-        public string GetColor()
-        {
-            return Color;
-        }
-        public void SetColor(string color)
-        {
-            Color = color;
-        }
-        public string GetEnvironment()
-        {
-            return Environment;
-        }
-        public void SetEnvironment(string environment)
-        {
-            Environment = environment;
-        }
-        public string GetFood()
-        {
-            return Food;
-        }
-        public void SetFood(string food)
-        {
-            Food = food;
-        }
-
+        //Get Set      
         public static void DiceMammal()
         {
             Console.WriteLine("enter the name of Mammal:");

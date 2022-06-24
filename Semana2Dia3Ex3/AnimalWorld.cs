@@ -1,6 +1,6 @@
 ﻿namespace Semana2Dia3Ex3 
 {
-    public class AnimalWorld : General, IAnimals, IFish, IMammal
+    public class AnimalWorld : Animals
     {
         public string Animal1;
         public string Animal2;
@@ -40,7 +40,7 @@
 
             var animalWorld1 = new AnimalWorld(animal1, animal2, animal3, animal4);
 
-            Console.WriteLine($"Report:\nAnimal 1 {animalWorld1.Animal1} \nAnimal 2 {animalWorld1.Animal2} \nAnimal 3 {animalWorld1.Animal3} \nAnimal 4 {animalWorld1.Animal4}");
+            Console.WriteLine($"Report:\nAnimal 1 {animalWorld1.Animal1} \nAnimal 2 {animalWorld1.Animal2} \nAnimal 3 {animalWorld1.Animal3} \nAnimal 4 {animalWorld1.Animal4}");         
         }
     }
 }

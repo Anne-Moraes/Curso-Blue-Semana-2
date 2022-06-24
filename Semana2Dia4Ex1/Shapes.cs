@@ -1,42 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Semana2Dia4Ex1
+﻿namespace Semana2Dia4Ex1
 {
-    public class Shapes : Shapes1, ITriangle, ISquare, IRectangle, ICircle 
+    public class Shape : Square
     {
-        
-        static void Main(string[] args)
-        {
-            public override void CalTriangle()
-            {
-            }
+        /*1 - Área das figuras
+        Faça um programa que calcule a área de uma figura
+        geométrica planas.Aceite quatro tipos de figura 
+        geométrica: quadrado, retângulo, triângulo e 
+        círculo.Utilize as fórmulas abaixo para chegar
+        na área das figuras planas.*/
 
+        public double Side { get; private set; }        
+        public Shape(double area, double side) : base(area)
+        {
+           Side = side;
+        }
+        public static void Run()
+        {
+        }
+
+        //Construtor
+
+        public override double CalcularArea()
+        {
+            Console.WriteLine("Calculate the area of your Shape");
+
+            Console.WriteLine("enter a number for Side:");
+            Side = double.Parse(Console.ReadLine());
+
+            return Side * Side;
         }
 
     }
-    }
-    public interface IShapes
-    {
 
-    }
-    public interface ITriangle : IShapes
-    {
-    }
-    public interface ISquare : IShapes
-    {
-    }
-    public interface IRectangle : IShapes
-    {
-
-    }
-    public interface ICircle : IShapes
-    {
-    }
-    public class Shapes1 : IShapes
-    {
-    }
 }

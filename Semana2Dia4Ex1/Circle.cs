@@ -1,6 +1,6 @@
 ﻿namespace Semana2Dia4Ex1
 {
-    abstract class Circle : Shapes
+    public class Circle : Square
     {
         /*1 - Área das figuras
         Faça um programa que calcule a área de uma figura
@@ -8,26 +8,31 @@
         geométrica: quadrado, retângulo, triângulo e 
         círculo.Utilize as fórmulas abaixo para chegar
         na área das figuras planas.*/
-
-        public int Area;
-        public int Constant;
-        public int Radius;
+        
+        public double Constant;
+        public double Radius;
 
 
         //Construtor
-        public Circle(int area, int constant, int radius)
-        {
-            Area = area;
+        public Circle(double area, double constant, double radius) : base(area)
+        {        
             Constant = constant;
             Radius = radius;
         }
-        //Contrutor Padrão
-        public Circle()
-        {
-
-        }
+        //Contrutor Padrão       
         public static void Run()
         {
+        }
+        public override double CalcularArea()
+        {
+            Constant = 3.14;
+
+            Console.WriteLine("Calculate the area of your Circle");
+
+            Console.WriteLine("enter a number for Radius:");
+            Radius = double.Parse(Console.ReadLine());
+
+            return Constant * (Radius * Radius);
         }
 
     }
