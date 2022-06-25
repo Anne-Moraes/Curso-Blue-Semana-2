@@ -1,5 +1,5 @@
 ﻿
-namespace Semana2Dia1Ex2 
+namespace Semana2Dia2Ex1 
 {
     internal class Enunciado
     {  
